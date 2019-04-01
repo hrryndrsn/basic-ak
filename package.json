@@ -3,9 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atlaskit/atlassian-switcher": "^0.3.5",
+    "@atlaskit/breadcrumbs": "^7.0.2",
+    "@atlaskit/button": "^11.0.5",
+    "@atlaskit/css-reset": "^3.0.7",
+    "@atlaskit/global-navigation": "^6.2.3",
+    "@atlaskit/logo": "^10.0.2",
+    "@atlaskit/navigation-next": "^5.1.1",
+    "@atlaskit/page": "^9.0.1",
+    "@atlaskit/page-header": "^7.0.2",
+    "@atlaskit/select": "^8.0.4",
+    "@atlaskit/textfield": "^0.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-intl": "^2.8.0",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
