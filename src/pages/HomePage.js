@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Page, { Grid, GridColumn } from "@atlaskit/page";
 import PageHeader from "@atlaskit/page-header";
 import { BreadcrumbsStateless, BreadcrumbsItem } from "@atlaskit/breadcrumbs";
@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 const breadcrumbs = (
   <BreadcrumbsStateless onExpand={() => {}}>
     <BreadcrumbsItem text="sample continer" key="Sample container" />
-    <Link to="/"><BreadcrumbsItem text="Home" key="Parent page" /></Link>
+    <BreadcrumbsItem text="Home" key="Parent page" />
   </BreadcrumbsStateless>
 );
 const actionsContent = (
@@ -35,8 +35,8 @@ const barContent = (
   </div>
 );
 
-export default class HomePage extends Component {
-  render() {
+const HomePage= () => {
+  const [count, setCount] = useState(0)
     return (
       <Page>
         <Grid>
@@ -53,8 +53,11 @@ export default class HomePage extends Component {
               Home
             </PageHeader>
             <p>
-              This page is a stub
+              This page is a stub {count}
             </p>
+            <button onClick={() => setCount(count +1)}>+1</button>
+            <button onClick={() => setCount(count +1)}>-1</button>
+            <button onClick={() => setCount(0)}>reset</button>
           </GridColumn>
           <GridColumn
             medium={2}
@@ -63,5 +66,6 @@ export default class HomePage extends Component {
         </Grid>
       </Page>
     );
-  }
 }
+
+export default HomePage;

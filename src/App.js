@@ -103,8 +103,8 @@ export default () => (
       >
         <div >
         {/* content goes here */}
-          <Route path='/' exact component={() => <HomePage/>}/>
-          <Route path='/reports' component={() => <ReportsPage/>}/>
+          <Route path='/' exact component={(props) => <HomePage props/>}/>
+          <Route path='/reports' component={(props) => <ReportsPage {...props}/>}/>
           <Route path='/settings' component={() => <SettingsPage/>}/>
         </div>
       </LayoutManager>

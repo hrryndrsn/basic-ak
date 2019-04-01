@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
 const breadcrumbs = (
   <BreadcrumbsStateless onExpand={() => {}}>
     <BreadcrumbsItem text="sample continer" key="Sample container" />
-    <Link to="/"><BreadcrumbsItem text="Home" key="Parent page" /></Link>
+    <BreadcrumbsItem text="Home" key="Parent page" />
   </BreadcrumbsStateless>
 );
 const actionsContent = (
